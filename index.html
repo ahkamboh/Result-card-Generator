@@ -349,6 +349,8 @@
         color: white;
         text-transform: uppercase;
         ;
+        position: sticky;
+        top: 0;
 
 
     }
@@ -412,8 +414,8 @@
         }
 
     }
-    @media(max-width:300px)
-    {
+
+    @media(max-width:300px) {
         .Navbar h4 {
             font-size: 50%;
             width: 100%;
@@ -439,7 +441,7 @@
         </div>
     </header>
 
-    <form method="post" name="submitform" autocomplete="off">
+    <form id="myForm" method="post" name="submitform" autocomplete="off">
         <div class="main">
             <div class="head">
                 <img src="https://img.icons8.com/emoji/48/000000/man-student.png" />
@@ -474,24 +476,26 @@
                 </div>
                 Submit Form
             </button>
+
         </div>
-    </form>
-    <iframe
-        src="https://www.appsheet.com/start/1297a1d5-df91-4b55-ac0b-96d56b18a32b#appName=StudentResultCard-451068180&group=%5B%5D&page=deck&selected=null&sort=%5B%7B%22Column%22%3A%22Student-Name%22%2C%22Order%22%3A%22Ascending%22%7D%5D&table=Student+Result+Card&view=Student+Result+Card"></iframe>
 
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyseC2CjEa0dRZK0g_B2Y2gTpVjCXOwi0ArTlHaHx93RiEaYXay0uDjIN1npTAnYnyQyw/exec'
-        const form = document.forms['submitform']
+        <iframe src="https://www.appsheet.com/start/1297a1d5-df91-4b55-ac0b-96d56b18a32b"></iframe>
 
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => alert("Thank you! your form is submitted successfully."))
-                .then(() => { window.location.reload(); })
-                .catch(error => console.error('Error!', error.message))
-        })
 
-    </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyseC2CjEa0dRZK0g_B2Y2gTpVjCXOwi0ArTlHaHx93RiEaYXay0uDjIN1npTAnYnyQyw/exec'
+            const form = document.forms['submitform']
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => alert("Thank you! your form is submitted successfully."))
+                    .then(() => { document.getElementById("myForm").reset(); })
+                    // .then(() => { window.location.reload(); })
+                    .catch(error => console.error('Error!', error.message))
+            })
+
+        </script>
 
 </body>
 

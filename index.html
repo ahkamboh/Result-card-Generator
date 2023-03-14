@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student result card</title>
+    <title>Student Result Card</title>
     <link rel="icon" href="https://img.icons8.com/fluency/48/000000/petition.png">
 
 
@@ -70,8 +70,6 @@
         margin-right: 10px;
     }
 
-
-
     h3 {
         color: white;
     }
@@ -100,7 +98,7 @@
     }
 
     ::placeholder {
-        color: rgb(0, 0, 0);
+        color: #006aff;
         font-weight: 700;
     }
 
@@ -146,8 +144,7 @@
         border: none;
         outline: none;
         cursor: pointer;
-        position: relative;
-        border-radius: 5px;
+        border-radius: 7px;
         font-size: 14px;
         font-weight: 500;
         line-height: 19px;
@@ -340,7 +337,7 @@
         color: white;
         text-transform: uppercase;
         position: fixed;
-        z-index: 1;
+        z-index: 3;
         top: 0;
 
 
@@ -414,6 +411,9 @@
 
         }
     }
+    .First-child,.Last-child{
+        border-radius: 4px;
+    }
 </style>
 
 <body>
@@ -436,19 +436,19 @@
             <div class="head">
                 <img src="https://img.icons8.com/emoji/48/000000/man-student.png" />
                 <h3>Student details</h3>
-                <input type="number" name="Roll-Number" placeholder="Roll-Number" required>
+                <input type="number" name="Roll-Number"class="First-child" placeholder="Roll-Number" required>
                 <input type="text" name="Student-Name" id="Student-Name" placeholder="Student-Name" required>
-                <input type="text" name="Father-Name" id="Father-Name" placeholder="Father Name" required><br><br>
+                <input type="text" name="Father-Name" id="Father-Name"class="Last-child" placeholder="Father Name" required><br><br>
                 <img src="https://img.icons8.com/color/48/000000/open-book--v1.png" />
                 <h3 class="h3">Subject Number</h3>
             </div>
             <div class="subject">
-                <input type="number" name="Urdu" placeholder="Urdu" required>
+                <input type="number" class="First-child" name="Urdu" placeholder="Urdu" required>
                 <input type="number" name="English" placeholder="English" required>
                 <input type="number" name="Pak-Study" placeholder="Pak-Study" required>
                 <input type="number" name="Computer" placeholder="Computer" required>
                 <input type="number" name="Islamiyat" placeholder="Islamiyat" required>
-                <input type="number" name="Math" placeholder="Math" required>
+                <input type="number" name="Math" placeholder="Math" class="Last-child" required>
             </div>
             <button class="continue-application">
                 <div>

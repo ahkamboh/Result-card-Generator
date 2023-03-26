@@ -9,4 +9,4 @@ Result card generator and Data saver  fully responsive by Javascript , appsheet 
  #For google appsheet setting watch this video Back-end Setting just click on the photo  ↓ 
  
  [![Google sheet Setting](https://user-images.githubusercontent.com/123060177/227789375-f13c5b69-ed97-468e-bc2e-b09446ade8f2.png) ](https://www.youtube.com/embed/VJ3u9Hv97YE)
-  # Thank for yours time here. 
+  # Thank you for your time Here.
